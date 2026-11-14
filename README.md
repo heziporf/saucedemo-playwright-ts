@@ -25,7 +25,7 @@ npm install
 npm test
 ```
 
-That's all. `npm install` also downloads Chromium, and no `.env` is needed (see [Environment](#-environment)). You should see `40 passed`: the 30 required tests, the 6 known issues (expected failures count as passed), 3 network tests and the login setup.
+That's all. `npm install` also downloads Chromium, and no `.env` is needed (see [Environment](#-environment)). You should see `40 passed`: the 30 required tests, the 6 known issues (expected failures count as passed), 3 network tests and the login setup. The 6 known-issue tests show a red ✘ in the list: that is their expected failure (a real bug still on the site), so they count as passed.
 
 If your network blocks the automatic browser download, run `npx playwright install chromium` once, then `npm test`.
 

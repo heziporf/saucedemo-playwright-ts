@@ -4,7 +4,7 @@ import { catalog, products } from '@/test-data/products.data';
 
 test.describe('Network', { tag: tags.regression }, () => {
   test('NET-01: every product image loads successfully', async ({ loggedInPage }) => {
-    const imageResponses = loggedInPage.recordProductImageResponses();
+    const imageResponses = await loggedInPage.recordProductImageResponses();
 
     await loggedInPage.reload();
 

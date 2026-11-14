@@ -53,7 +53,9 @@ export class InventoryPage extends BasePage {
     await this.page.route(this.productImageUrl, (route) => route.abort());
   }
 
-  recordProductImageResponses(): ResponseRecord[] {
+  @step
+  async recordProductImageResponses(): Promise<ResponseRecord[]> {
+    await this.page.route(this.productImageUrl, (route) => route.continue());
     const records: ResponseRecord[] = [];
     this.page.on('response', (response) => {
       if (this.productImageUrl.test(response.url())) {
