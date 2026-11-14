@@ -62,7 +62,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps ${{ matrix.project }}
+      - run: npx playwright install --with-deps chromium ${{ matrix.project }}
       - run: npx playwright test --project=${{ matrix.project }}
       - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
