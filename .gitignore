@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Environment (use .env.example as the template)
+.env
+
+# Playwright output
+test-results/
+playwright-report/
+playwright/.auth/
+
+# Allure
+allure-results/
+allure-report/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
